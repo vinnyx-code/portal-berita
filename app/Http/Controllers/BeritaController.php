@@ -54,7 +54,7 @@ class BeritaController extends Controller
         $kategori = Kategori::all();
         return view('admin.berita.edit', compact('berita', 'kategori'));
     }
-
+//ini coba untuk github
     public function update(Request $request, Berita $berita)
     {
         $request->validate([
