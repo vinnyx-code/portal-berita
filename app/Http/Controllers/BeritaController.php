@@ -55,6 +55,7 @@ class BeritaController extends Controller
         return view('admin.berita.edit', compact('berita', 'kategori'));
     }
 //ini coba untuk github
+//alhdadjsaida
     public function update(Request $request, Berita $berita)
     {
         $request->validate([
