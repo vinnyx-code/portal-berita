@@ -50,27 +50,21 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="{{route('admin.dashboard')}}">
+                <a class="nav-link" href="{{route('penulis.dashboard')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('kategori.index')}}">
+                <a class="nav-link" href="{{route('penulis.kategori.index')}}">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Kategori</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('berita.index')}}">
+                <a class="nav-link" href="{{route('penulis.berita.index')}}">
                     <i class="fas fa-fw fa-table"></i>
                     <span>berita</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('user.index')}}">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>User</span></a>
-            </li>
-
-
+            
         </ul>
         <!-- End of Sidebar -->
 
@@ -166,13 +160,13 @@
                 <!-- End of Topbar -->
                 <div class="container mt-3">
                     @if(session('success'))
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        {{ session('success') }}
-                    </div>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ session('success') }}
+                        </div>
                     @elseif(session('error'))
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        {{ session('error') }}
-                    </div>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            {{ session('error') }}
+                        </div>
                     @endif
                 </div>
 
@@ -204,8 +198,8 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-
-     <!-- Logout Modal-->
+    
+ <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -246,7 +240,7 @@
     <!-- Page level custom scripts -->
     <script src="{{asset('js/demo/datatables-demo.js')}}"></script>
 
-
+ 
 
 </body>
 
