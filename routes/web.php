@@ -9,6 +9,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PenulisController;
 use App\Http\Controllers\KategoriPenulisController;
 use App\Http\Controllers\BeritaPenulisController;
+use App\Http\Controllers\WebController;
 use illuminate\Support\Facades\Auth;
 
 /*
@@ -22,9 +23,9 @@ use illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WebController::class, 'index'])->name('web.index');
+Route::get('/berita/{slug}', [WebController::class, 'show'])->name('web.show');
+Route::get('/kategori{id}', [WebController::class, 'kategori'])->name('web.kategori');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
